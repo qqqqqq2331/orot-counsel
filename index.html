@@ -606,6 +606,12 @@ footer{background:var(--bg3);padding:2.5rem 5%;border-top:1px solid var(--border
 
 <script>
 function toggle(el){el.parentElement.classList.toggle('open')}
+  document.addEventListener('DOMContentLoaded', function(){
+  const grid = document.querySelector('.counselor-grid');
+  const cards = Array.from(grid.children);
+  cards.sort(() => Math.random() - 0.5);
+  cards.forEach(c => grid.appendChild(c));
+});
 </script>
 </body>
 </html>
